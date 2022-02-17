@@ -25,7 +25,7 @@ public class main{
         public static void createTableBooks() {
                 String url = "jdbc:sqlite:C://sqlite/db/test.db";
                 String sql = "CREATE TABLE IF NOT EXISTS books (\n"
-                + "	id integer PRIMARY KEY NOT NULL UNIQUE,\n"
+                + "	book_id integer PRIMARY KEY NOT NULL UNIQUE,\n"
                 + "	book_title varchar(50) NOT NULL,\n"
                 + "	user_id varchar(50) NOT NULL,\n"
                 + "	book_content text NOT NULL,\n"
