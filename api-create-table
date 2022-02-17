@@ -1,0 +1,50 @@
+package createTables;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class main{
+
+public static void createTableUsers() {
+        String url = "jdbc:sqlite:C://sqlite/db/tests.db";
+        String sql = "CREATE TABLE IF NOT EXISTS users (\n"
+                + "	user_id integer PRIMARY KEY NOT NULL UNIQUE,\n"
+                + "	name text NOT NULL UNIQUE\n"
+                + ");";
+        
+        try (Connection conn = DriverManager.getConnection(url);
+                Statement stmt = conn.createStatement()) {
+            stmt.execute(sql);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+public static void createTableBooks() {
+        String url = "jdbc:sqlite:C://sqlite/db/tests.db";
+        String sql = "CREATE TABLE IF NOT EXISTS books (\n"
+                + "	id integer PRIMARY KEY NOT NULL UNIQUE,\n"
+                + "	book_title varchar(50) NOT NULL,\n"
+                + "	user_id varchar(50) NOT NULL,\n"
+                + "	book_content text NOT NULL,\n"
+                + ");";
+        
+        try (Connection conn = DriverManager.getConnection(url);
+                Statement stmt = conn.createStatement()) {
+            // create a new table
+            stmt.execute(sql);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        createTableUsers();
+        createTableBooks();
+    }
+    
+    {
