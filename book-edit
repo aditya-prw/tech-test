@@ -1,0 +1,41 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import package.connection;
+import package.api-create-table;
+import package.api-crud;
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Index</index>
+  <h1>Book Index</h1>
+  <h2>Welcome to your personal book index</h2>
+</head>
+<body>
+  <div>
+  <h5>Enter your updated book</h5>
+  <form>
+    <label for="bookid">Book ID  : </label><br>
+    <input type="text" id="bookid" name="bookid"><br>
+    <label for="booktitle">Book Title  : </label><br>
+    <input type="text" id="booktitle" name="booktitle"><br>
+    <label for="userid">Book User ID  : </label><br>
+    <input type="text" id="userid" name="userid"><br>
+    <label for="bookcontent">Book Content  : </label><br>
+    <input type="text" id="bookcontent" name="bookcontent"><br>
+    <button onclick=package.api-crud.updateBook(bookid, booktitle, userid, bookcontent)>Submit</button>
+  </form>
+  <br>
+  <br>
+  <h5>Enter the id of the user you want to delete</h5>
+  <form>
+    <label for="bookid">Book ID : </label><br>
+    <input type="text" id="bookid" name="bookid"><br>
+    <button onclick=package.api-crud.deleteBook(bookid)>Delete</button>
+  </form>
+  </div>
+</body>
+</html>
