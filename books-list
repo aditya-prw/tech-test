@@ -1,0 +1,228 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import package.connection;
+import package.api-create-table;
+import package.api-crud;
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Index</index>
+  <h1>Book Index</h1>
+  <h2>Welcome to your personal book index</h2>
+</head>
+<body>
+  <div>
+    <h5>
+    <table>
+      <tr>
+        <td>Title</td>
+        <td>User ID</td>
+        <td>Content</td>
+      </tr>
+      <tr>
+        <td>LBU</td>
+        <td>1</td>
+        <td>
+                <!DOCTYPE html>
+                <html lang="en" xmlns:th="http://www.thymeleaf.org">
+                <head>
+                    <title>Laporan Bank Umum (LBU)</title>
+                </head>
+                <body>
+                 <table style="width: 130%">
+                  <tr>
+                   <td>Jenis laporan bulanan bank umum konvensional dibagi menjadi 4 Jenis:</td>
+                  </tr>
+                  <tr>
+                   <td>
+                   <li>Laporan Gabungan<br>Kantor pusat bank yang memiliki kantor cabang wajib menyampaikan laporan secara gabungan dari&nbsp;kantor cabangnya baik kantor cabang yang melakukan kegiatan operasional di Indonesia maupun di&nbsp;luar Indonesia. Bagi kantor cabang bank asing laporan gabungan dimaksud adalah gabungan dari kantor&nbsp;cabang pembantunya yang melakukan kegiatan operasional di Indonesia. Laporan ini terdiri dari 8 Form, yaitu:<p></p>
+                    <ol>
+                     <li>Neraca dan Rekening Administratif Gabungan (Form-01)</li>
+                     <li>Laporan Laba/Rugi Gabungan (Form-02)</li>
+                     <li>Daftar Rincian Aset Antarkantor pada Kantor yang Melakukan Kegiatan Operasional di Indonesia&nbsp;(Gabungan) (Form-03)</li>
+                     <li>Daftar Rincian Aset Antarkantor pada Kantor yang Melakukan Kegiatan Operasional di Luar Indonesia&nbsp;(Gabungan) (Form-04)</li>
+                     <li>Daftar Rincian Rupa-Rupa Aset Gabungan (Form-05)</li>
+                     <li>Daftar Rincian Kewajiban Antarkantor pada Kantor yang Melakukan Kegiatan Operasional di Indonesia (Gabungan) (Form-06)</li>
+                     <li>Daftar Rincian kewajibab Antarkantor pada Kantor yang Melakukan Kegiatan Operasional di Luar&nbsp;Indonesia (Gabungan) (Form-07)</li>
+                     <li>Daftar Rincian Rupa-Rupa Kewajiban Gabungan (Form-08)</li>
+                    </ol>
+                    </li>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td>
+                    <li>Laporan per Kantor Bank Pelapor<br>
+                    Setiap kantor bank yang melakukan kegiatan operasional diwajibkan membuat dan menyampaikan&nbsp;LBU adalah&nbsp;Kantor pusat dan kantor-kantor cabang yang berkedudukan di Indonesia dan&nbsp;Kantor-kantor operasional bank di luar Indonesia. Memiliki 52 form pelaporan yang dibagi menjadi 3 jenis rincian, yaitu:<p></p>
+                    <ul>
+                    <li>Neraca dan Daftar Rincian Pos Neraca (form-01 – form41)</li>
+                    <li>Daftar Rincian Pos Rekening Administratif dan Informasi Lainnya (form-42 – form-48)</li>
+                    <li>Lain-lain (Form-49-Form-52)</li>
+                    </ul>
+                    </li>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td>
+                    <li>Laporan Anak perusahaan<br>
+                    Kantor pusat&nbsp;bank yang memiliki anak perusahaan, wajib menyampaikan laporan perusahaan anak dan laporan&nbsp;secara konsolidasi dari bank sebagai perusahaan induk dengan perusahaan anaknya. memiliki 10 Form:<p></p>
+                    <ol>
+                    <li>Neraca dan Rekening Administratif (Form-01)</li>
+                    <li>Laporan Laba/Rugi (Form-02)</li>
+                    <li>Daftar Rincian Penempatan Pada Bank (Form-03)</li>
+                    <li>Daftar Rincian Tagihan Spot dan Derivatif (Form-04)</li>
+                    <li>Daftar Rincian Surat Berharga (Form-05)</li>
+                    <li>Daftar Rincian Surat Berharga yang Dijual dengan Janji Dibeli Kembali (Repo) (Form-06)</li>
+                    <li>Daftar Rincian Tagihan Atas Surat Berharga yang Dibeli dengan Janji Dijual kembali (Reverse Repo)&nbsp;(Form-07)</li>
+                    <li>Daftar Rincian Tagihan Akseptasi (Form-08)</li>
+                    <li>Daftar Rincian Kredit yang Diberikan (Form-09)</li>
+                    <li>Daftar Rincian Penyertaan (Form-10)</li>
+                    </ol>
+                    </li>
+                   </td>
+                  </tr>  
+                  <tr>  
+                   <td><li>Laporan Konsolidasi</li></td>
+                  </tr>
+                 </table>
+                </body>
+                </html>
+        </td>
+      </tr>
+      <tr>
+        <td>Programmer Imposter Syndrome</td>
+        <td>1</td>
+        <td>
+                <!DOCTYPE html>
+                <html lang="en" xmlns:th="http://www.thymeleaf.org">
+                <head>
+                    <title>Programmer Imposter Syndrome</title>
+                </head>
+                <body>
+                 <table style="width: 130%">
+                  <tr>
+                   <td>1. Accept that you will never be the most expert in technology. That’s why do not stop to learn.</td>
+                  </tr>
+                        <tr>
+                   <td>To be honest, you never really will be an expert in software development. <b>There will always be more to learn.</b> There will always be new languages, or processes, or technologies to learn. There will always be someone who knows something you don’t. There will always be someone who knows more than you do. There will always be someone who’s a better developer.<br/>That thought may be depressing right now, but I feel it’s actually liberating. You can focus on getting better and growing. Focus on what you can control: your skills and your knowledge. Accept that there will never be a point where you’ll feel completely knowledgeable and completely comfortable.<br/>
+                In short, as one developer I talked with said: get comfortable with being uncomfortable. Embrace your ignorance and use that to fuel your growth, not your self-doubt.
+                            </td>
+                  </tr>
+                        <tr>
+                   <td>2. Intelligence is not fix, you always can grow.</td>
+                  </tr>
+                        <tr>
+                   <td><b>intelligence is not fixed, and in fact, it is directly tied to effort and challenge.</b> The mindset of viewing obstacles as opportunities to learn, to help you improve instead of assaults on your intelligence. the process of learning is what makes you smarter.
+
+                only by working through difficult situations can one really get better and grow. Just like lifting heavier weights or running an extra mile, working through difficult intellectual problems will teach you how to handle even more difficult situations in the future.
+
+                Essentially, your feeling of inadequacy is a signal that you’re being challenged. To really become a great developer, you need to embrace that challenge and actually seek it out. View it as an opportunity to learn, to become better, and to grow.</td>
+                  </tr>
+                        <tr>
+                   <td>3. Tracking your success story</td>
+                  </tr>
+                        <tr>
+                   <td><b>Regularly reflecting on your successes can help remind you of how far you’ve come and how good you really are.</b> This will help balance the scales of positive vs negative self-talk that is at the heart of imposter syndrome.</td>
+                  </tr>
+                        <tr>
+                   <td></br>TO BE CONTINUE...</td>
+                  </tr>
+                 </table>
+                </body>
+                </html>
+        </td>
+      </tr>
+      <tr>
+        <td>Transaksi Derivatif</td>
+        <td>3</td>
+        <td>
+                <!DOCTYPE html>
+                <html lang="en" xmlns:th="http://www.thymeleaf.org">
+                <head>
+                    <title>Transaksi Derivatif</title>
+                </head>
+                <body>
+                 <div>Transaksi Derivatif adalah transaksi yang nilainya di turunkan dari nilai aset, tingkat referensi atau index. Kegunaan derivatif adalah sebagai asuransi & lindung nilai dan Spekulasi & arbitrasi. Salah satu kegunaan derivatif adalah sebagai suatu alat untuk mengalihkan risiko. Contoh  Derivatif</div>
+                    <br/><br/>
+                <table cellspacing="0" cellpadding="4" border="1">
+                <tbody>
+                <tr>
+                <th rowspan="2" bgcolor="#EBEBEB">Turunan</th>
+                <th style="text-align:center;" colspan="5" bgcolor="#EBEBEB">Jenis Kontrak</th>
+                </tr>
+                <tr>
+                <th style="text-align:center;" bgcolor="#EBEBEB">Bursa perdagangan berjangka</th>
+                <th style="text-align:center;" bgcolor="#EBEBEB">Bursa perdagangan opsi</th>
+                <th style="text-align:center;" bgcolor="#EBEBEB">Transaksi swap di luar bursa</th>
+                <th style="text-align:center;" bgcolor="#EBEBEB">Transaksi kontrak serah (<i>forward</i>)di luar bursa</th>
+                <th style="text-align:center;" bgcolor="#EBEBEB">Transaksi opsi di luar bursa</th>
+                </tr>
+                <tr>
+                <th bgcolor="#EBEBEB">Indeks Ekuitas</th>
+                <td>*Indeks berjangka DJIA<br>
+                *Indeks berjangka NASDAQ</td>
+                <td>*Opsi pada bursa berjangka Indeks DJIA<br>
+                *Opsi pada bursa berjangka Indeks NASDAQ</td>
+                <td>Swap ekuitas</td>
+                <td>Back-to-back</td>
+                <td>n/a</td>
+                </tr>
+                <tr>
+                <th bgcolor="#EBEBEB">Pasar uang</th>
+                <td>* Eurodolar<br>
+                * Euribor berjangka</td>
+                <td>*Opsi berjangka Eurodollar<br>
+                *Opsi berjangka Euribor</td>
+                <td>Swap suku bunga</td>
+                <td>Kontrak serah kurs</td>
+                <td>*Suku bunga <i>cap dan</i> floor <i><br>
+                *Opsi swap (Swaption)<br>
+                * Swap basis )</i></td>
+                </tr>
+                <tr>
+                <th bgcolor="#EBEBEB">Obligasi</th>
+                <td>Obligasi berjangka</td>
+                <td>Opsi berjangka obligasi</td>
+                <td>n/a</td>
+                <td>Perjanjian pembelian kembali</td>
+                <td>Opsi obligasi</td>
+                </tr>
+                <tr>
+                <th bgcolor="#EBEBEB">Saham</th>
+                <td>perdagangan berjangka saham</td>
+                <td>Opsi saham</td>
+                <td>Swap ekuitas</td>
+                <td>Perjanjian pembelian kembali</td>
+                <td>*Opsi saham<br>
+                *Waran<br>
+                *Waran turbo</td>
+                </tr>
+                <tr>
+                <th bgcolor="#EBEBEB">Bursa valuta asing</th>
+                <td>Perdagangan valuta asing berjangka</td>
+                <td>OpsiPerdagangan valuta asing berjangka</td>
+                <td>Swap mata uang</td>
+                <td>Kontrak serah valuta asing</td>
+                <td>Opsi valuta asing</td>
+                </tr>
+                <tr>
+                <th bgcolor="#EBEBEB">Kredit</th>
+                <td>n/a</td>
+                <td>n/a</td>
+                <td>Swap kredit</td>
+                <td>n/a</td>
+                <td>Opsi kredit</td>
+                </tr>
+                </tbody>
+                </table>
+                </body>
+                </html>
+          </td>
+        </tr>
+    </table>
+  </div>
+</body>
+</html>
