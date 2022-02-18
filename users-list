@@ -1,0 +1,48 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import package.connection;
+import package.api-create-table;
+import package.api-crud;
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Index</index>
+  <h1>Book Index</h1>
+  <h2>Welcome to your personal book index</h2>
+</head>
+<body>
+  <h5>Users List</h5>
+  <table>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>usersatu</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>userdua</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>usertiga</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>userempat</td>
+    </tr>
+    <tr>
+      <td>5</tr>
+      <td>userlima</td>
+    </tr>
+  </table>
+  <div>
+  </div>
+</body>
+</html>
