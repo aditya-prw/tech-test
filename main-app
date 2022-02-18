@@ -22,13 +22,6 @@ import package.api-crud;
     <input type="submit">
   </form>
   <div>
-    <table>
-      <tr>
-        <td>Title</td>
-        <td>User</td>
-        <td>Content</td>
-      </tr>
-    </table>
   </div>
 </body>
 </html>
