@@ -18,7 +18,7 @@ import package.api-crud;
   <h5>User</h5>
   <form>
     <label for="username">User Name : </label><br>
-    <input type="text" id="username" name="username><br>
+    <input type="text" id="username" name="username"><br>
     <button onclick=package.api-crud.createUser(username)>Submit</button>
   </form>
 </body>
