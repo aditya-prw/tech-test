@@ -1,0 +1,31 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import package.connection;
+import package.api-create-table;
+import package.api-crud;
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Index</index>
+  <h1>Book Index</h1>
+  <h2>Welcome to your personal book index</h2>
+</head>
+<body>
+  <h5>Enter your book info and content here : </h5>
+  <form>
+    <label for="booktitle">Title : </label><br>
+    <input type="text" id="booktitle" name="booktitle"><br>
+    <label for="userid">User ID : </label><br>
+    <input type="text" id="userid" name="userid"><br>
+    <label for="bookcontent">Book Content : </label><br>
+    <input type="text" id="bookcontent" name="bookcontent"><br>
+    <button onclick=package.api-crud.createBook(booktitle, userid, bookcontent)>Submit</button>
+  </form>
+  <div>
+  </div>
+</body>
+</html>
