@@ -8,8 +8,7 @@ import java.sql.Statement;
 public static main{
   
   //CRUD Users
-  public static void createUser(){
-        String InsertName;
+  public static void createUser(String InsertName){
         String url = "jdbc:sqlite:C://sqlite/db/test.db";
         String sql = "insert into users (name) values (\" + InsertName + \");";
             try (Connection conn = DriverManager.getConnection(url);
@@ -21,24 +20,19 @@ public static main{
   
   }
   
-  public static void updateUser(){
-        String InsertName;
-        int InsertID;
-                String url = "jdbc:sqlite:C://sqlite/db/test.db";
-                String sql = "update users (name) set (\" + InsertName + \") where user_id = InsertID;";
-        
-                        try (Connection conn = DriverManager.getConnection(url);
-                                Statement stmt = conn.createStatement()) {
-                                stmt.execute(sql);
-                        } catch (SQLException e) {
-                                System.out.println(e.getMessage());
-                        }
+  public static void updateUser(String InsertName, int InsertID){
+         String url = "jdbc:sqlite:C://sqlite/db/test.db";
+         String sql = "update users (name) set (\" + InsertName + \") where user_id = InsertID;";
+            try (Connection conn = DriverManager.getConnection(url);
+                    Statement stmt = conn.createStatement()) {
+                    stmt.execute(sql);
+            } catch (SQLException e) {
+                    System.out.println(e.getMessage());
+            }
   
   }
   
-  public static void deleteUsers(){
-        String InsertName;
-        int InsertID;
+  public static void deleteUsers(String InsertName, int InsertID){
         String url = "jdbc:sqlite:C://sqlite/db/test.db";
         String sql = "delete users where user_id = InsertID";        
               try (Connection conn = DriverManager.getConnection(url);
@@ -50,9 +44,7 @@ public static main{
   
   }
   
-  public static void readUsers(){
-        String InsertName;
-        int InsertID;
+  public static void readUsers(String InsertName, int InsertID){
         String url = "jdbc:sqlite:C://sqlite/db/test.db";
         String sql = "select * from users where user_id = InsertID";        
                try (Connection conn = DriverManager.getConnection(url);
@@ -64,10 +56,7 @@ public static main{
   
   }
   //CRUD Books
-  public static void createBook(){
-      String InsertTitle;
-      String InsertID;
-      String InsertContent;
+  public static void createBook(String InsertTitle, String InsertID, String InsertContent){
       String url = "jdbc:sqlite:C://sqlite/db/test.db";
       String sql = "insert into books (book_title, user_id, book_content) values (\" + InsertTitle + \", \" + InsertID + \", \" + InsertContent + \");";        
               try (Connection conn = DriverManager.getConnection(url);
@@ -79,7 +68,7 @@ public static main{
   
   }
   
-  public static void updateUser(){
+  public static void updateUser(int InsertBookID, String InsertTitle, String InsertID, String InsertContent){
       int InsertBookID;
       String InsertTitle;
       String InsertID;
@@ -95,11 +84,7 @@ public static main{
   
   }
   
-  public static void deleteUser(){
-     int InsertBookID;
-     String InsertTitle;
-     String InsertID;
-     String InsertContent;
+  public static void deleteUser(int InsertBookID, String InsertTitle, String InsertID, String InsertContent){
      String url = "jdbc:sqlite:C://sqlite/db/test.db";
      String sql = "delete books where book_id = InsertBookID";
               try (Connection conn = DriverManager.getConnection(url);
@@ -111,11 +96,7 @@ public static main{
   
   }
   
-  public static void readUser(){
-     int InsertBookID;
-     String InsertTitle;
-     String InsertID;
-     String InsertContent;
+  public static void readUser(int InsertBookID, String InsertTitle, String InsertID, String InsertContent){
      String url = "jdbc:sqlite:C://sqlite/db/test.db";
      String sql = "select * from books where book_id = InsertBookID";
              try (Connection conn = DriverManager.getConnection(url);
