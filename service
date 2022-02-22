@@ -1,0 +1,73 @@
+package test.service;  
+import java.util.ArrayList;  
+import java.util.List;  
+import org.springframework.beans.factory.annotation.Autowired;  
+import org.springframework.stereotype.Service;  
+import test.model.Book;  
+import test.repository.BookRepository;
+import test.model.Users;  
+import test.repository.UsersRepository;  
+
+@Service  
+public class BookService{  
+@Autowired  
+BookRepository bookRepository;
+
+public List<Book> getAllBooks(){  
+  List<Book> book = new ArrayList<Book>();  
+  bookRepository.findAll().forEach(book1 -> book.add(book1));  
+  return book;  
+} 
+
+public Books getBookById(int id)   
+{  
+return bookRepository.findById(id).get();  
+} 
+
+public void saveOrUpdateBook(Book book)   
+{  
+bookRepository.save(book);  
+}  
+
+public void deleteBook(int id)   
+{  
+bookRepository.deleteById(id);  
+}  
+
+public void update(Book book, int bookid)   
+{  
+bookRepository.save(book);  
+}
+
+@Service  
+public class UsersService{  
+@Autowired  
+UsersRepository usersRepository;  
+public List<Users> getAllUsers(){  
+  List<Users> user = new ArrayList<Users>();  
+  userRepository.findAll().forEach(user1 -> user.add(user1));  
+  return book;  
+} 
+
+public Users getUsersById(int id)   
+{  
+return userRepository.findById(id).get();  
+} 
+
+public void saveOrUpdateUser(Users users)   
+{  
+userRepository.save(users);  
+}  
+
+public void deleteUser(int id)   
+{  
+userRepository.deleteById(id);  
+}  
+
+public void updateUser(Users user, int userid)   
+{  
+userRepository.save(user);  
+}
+
+
+}  
