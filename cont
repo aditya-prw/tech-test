@@ -1,0 +1,87 @@
+package test.controller;  
+import java.util.List;  
+import org.springframework.beans.factory.annotation.Autowired;  
+import org.springframework.web.bind.annotation.DeleteMapping;  
+import org.springframework.web.bind.annotation.GetMapping;  
+import org.springframework.web.bind.annotation.PathVariable;  
+import org.springframework.web.bind.annotation.PostMapping;  
+import org.springframework.web.bind.annotation.PutMapping;  
+import org.springframework.web.bind.annotation.RequestBody;  
+import org.springframework.web.bind.annotation.RestController;  
+import test.model.Book;
+import test.model.Users;
+import test.service.BookService;
+import test.service.UsersService;
+
+@RestController  
+public class BookController   
+{  
+
+@Autowired  
+BookService bookService;  
+
+@GetMapping("/book")  
+private List<Books> getAllBooks()   
+{  
+return booksService.getAllBooks();  
+}  
+
+@GetMapping("/book/{bookid}")  
+private Book getBooks(@PathVariable("bookid") int bookid){
+  return booksService.getBookById(bookid);  
+}  
+
+@DeleteMapping("/book/{bookid}")  
+private void deleteBook(@PathVariable("bookid") int bookid)   
+{  
+  booksService.deleteBook(bookid);  
+}  
+
+@PostMapping("/books")  
+private int saveBook(@RequestBody Books books){
+  booksService.saveOrUpdateBook(book);  
+  return book.getBookid();  
+}  
+
+@PutMapping("/books")  
+private Book updateBook(@RequestBody Book book){  
+  booksService.saveOrUpdateBook(book);  
+  return books;  
+}  
+} 
+
+@RestController  
+public class UserController   
+{  
+
+@Autowired  
+UsersService usersService;  
+
+@GetMapping("/users")  
+private List<Users> getAllUsers(){
+  return usersService.getAllUsers();  
+}  
+
+@GetMapping("/users/{userid}")  
+private Book getUsers(@PathVariable("userid") int userid){
+  return booksService.getUserById(userid);  
+}  
+
+@DeleteMapping("/users/{userid}")  
+private void deleteUser(@PathVariable("userid") int userid)   
+{  
+  booksService.deleteUser(userid);  
+}  
+
+@PostMapping("/users")  
+private int saveUser(@RequestBody Users users){
+  booksService.saveOrUpdateUser(userid);  
+  return user.getUserid();  
+}  
+
+@PutMapping("/users")  
+private Book updateUser(@RequestBody Users users){  
+  booksService.saveOrUpdateUser(userid);  
+  return users;  
+}  
+} 
