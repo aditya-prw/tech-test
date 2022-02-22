@@ -1,4 +1,4 @@
-package com.javatpoint.repository;  
+package test.repository;  
 import org.springframework.data.repository.CrudRepository;  
 import test.model.Books;
 import test.model.Users;
